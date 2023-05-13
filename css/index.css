@@ -1,0 +1,35 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff !important;
+    color: #ffffff !important;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("../img/DSC06458.JPG") !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+#particles-js {
+    height: 100vh;
+}
+/* particles container */
+#particlesWrapper {
+    position: relative;
+    height: 100vh; /* puedes cambiar este valor por lo que desea en px */
+}
+/* particles title */
+#titulo {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    /* Centra el texto tanto vertical como horizontalmente */
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Se asegura de que no hay eventos de puntero, por lo que cuando se pasa el texto el efecto sigue funcionando y no está bloqueado */
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}

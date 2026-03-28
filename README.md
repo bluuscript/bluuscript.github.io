@@ -83,21 +83,11 @@ Me especializo en crear soluciones digitales eficientes y escalables que resuelv
 
 ---
 
-## 📊 Estadísticas de GitHub
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=bluuscript&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9" alt="Estadísticas de GitHub">
-  
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=bluuscript&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9" alt="Lenguajes más usados">
-</div>
-
----
-
 ## 🌐 Portafolio Web
 
 Puedes ver mi portafolio profesional en línea:
 
-[**tomasmilla.cl**](https://tomasmilla.cl)
+[**bluuscript.github.io**](https://bluuscript.github.io/)
 
 ### Características del Portafolio
 - 🎨 Diseño moderno y responsivo con Tailwind CSS
@@ -121,7 +111,7 @@ Puedes ver mi portafolio profesional en línea:
   
   [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/bluuscript)
   
-  [![Portafolio](https://img.shields.io/badge/Portafolio-667eea?style=for-the-badge&logo=firefox&logoColor=white)](https://tomasmilla.cl)
+  [![Portafolio](https://img.shields.io/badge/Portafolio-667eea?style=for-the-badge&logo=firefox&logoColor=white)](https://bluuscript.github.io/)
   
 </div>
 
@@ -138,8 +128,6 @@ Actualmente trabajando en:
 ---
 
 <div align="center">
-  
-  **"El código es poesía escrita en lógica"**
   
   *Tomás Fuentes Milla*
   

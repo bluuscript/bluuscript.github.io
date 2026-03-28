@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomás Fuentes Milla - Desarrollador Full Stack | Portafolio</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Portafolio profesional de Tomás Fuentes Milla, Desarrollador Full Stack especializado en JavaScript, Python, Node.js, React y Django. Proyectos web modernos y soluciones digitales innovadoras.">
+    <meta name="keywords" content="Tomás Fuentes Milla, desarrollador full stack, portafolio, JavaScript, Python, Node.js, React, Django, Chile, Puerto Montt, desarrollo web, programación">
+    <meta name="author" content="Tomás Fuentes Milla">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="es">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Tomás Fuentes Milla - Desarrollador Full Stack">
+    <meta property="og:description" content="Desarrollador Full Stack especializado en JavaScript, Python y tecnologías web modernas. Portafolio de proyectos y soluciones digitales.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tomasmilla.cl">
+    <meta property="og:image" content="https://tomasmilla.cl/foto-perfil.webp">
+    <meta property="og:site_name" content="Tomás Fuentes Milla - Portafolio">
+    <meta property="og:locale" content="es_CL">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tomás Fuentes Milla - Desarrollador Full Stack">
+    <meta name="twitter:description" content="Desarrollador Full Stack especializado en JavaScript, Python y tecnologías web modernas.">
+    <meta name="twitter:image" content="https://tomasmilla.cl/foto-perfil.webp">
+    <meta name="twitter:creator" content="@bluuscript">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tomasmilla.cl">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="favicon.webp">
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Additional SEO -->
+    <meta name="theme-color" content="#667eea">
+    <meta name="msapplication-TileColor" content="#667eea">
+    <meta name="application-name" content="Tomás Fuentes Milla - Portafolio">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in': 'fadeIn 0.8s ease-out',
+                        'slide-up': 'slideUp 0.6s ease-out',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(30px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(50px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .tech-badge {
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            color: #667eea;
+            transition: all 0.2s ease;
+        }
+        .tech-badge:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .hero-pattern {
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="scroll-smooth">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold gradient-text">Portafolio</div>
+                <ul class="hidden md:flex space-x-8">
+                    <li><a href="#home" class="nav-link text-gray-700 hover:text-indigo-600 font-medium transition-colors">Inicio</a></li>
+                    <li><a href="#projects" class="nav-link text-gray-700 hover:text-indigo-600 font-medium transition-colors">Proyectos</a></li>
+                    <li><a href="#skills" class="nav-link text-gray-700 hover:text-indigo-600 font-medium transition-colors">Habilidades</a></li>
+                    <li><a href="#contact" class="nav-link text-gray-700 hover:text-indigo-600 font-medium transition-colors">Contacto</a></li>
+                </ul>
+                <button id="mobile-menu-btn" class="md:hidden">
+                    <i class="fas fa-bars text-2xl text-gray-700"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <ul class="space-y-2">
+                    <li><a href="#home" class="block py-2 text-gray-700 hover:text-indigo-600 font-medium">Inicio</a></li>
+                    <li><a href="#projects" class="block py-2 text-gray-700 hover:text-indigo-600 font-medium">Proyectos</a></li>
+                    <li><a href="#skills" class="block py-2 text-gray-700 hover:text-indigo-600 font-medium">Habilidades</a></li>
+                    <li><a href="#contact" class="block py-2 text-gray-700 hover:text-indigo-600 font-medium">Contacto</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg hero-pattern min-h-screen flex items-center text-white relative overflow-hidden">
+        <div class="container mx-auto px-6 py-20 relative z-10">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-4 leading-tight text-gray-600">
+                        Tomás Fuentes Milla
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl font-medium mb-6 opacity-90 text-gray-600">
+                        Desarrollador Full Stack
+                    </h2>
+                    <p class="text-lg mb-8 opacity-80 leading-relaxed text-gray-600">
+                        Desarrollador apasionado con experiencia en JavaScript, Python y tecnologías Full Stack. 
+                        Actualmente participando en el Bootcamp Desarrollo de Aplicaciones Full Stack JavaScript Trainee de SENCE, 
+                        donde he desarrollado proyectos web modernos con Node.js, Express, React y Django. 
+                        Me enfoco en crear soluciones digitales eficientes y escalables que resuelvan problemas reales.
+                    </p>
+                    <div class="flex gap-4 mt-6">
+                        <a href="https://www.linkedin.com/in/tom%C3%A1s-fuentes-milla/" target="_blank" class="text-gray-600 hover:text-gray-200 transition-colors">
+                            <i class="fab fa-linkedin text-2xl"></i>
+                        </a>
+                        <a href="https://github.com/bluuscript" target="_blank" class="text-gray-600 hover:text-gray-200 transition-colors">
+                            <i class="fab fa-github text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl animate-float">
+                            <img src="./img/foto-perfil.webp" 
+                                 alt="Tomás Fuentes Milla" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-4 -right-4 w-20 h-20 gradient-bg rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-code text-white text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center md:text-left mt-8 md:mt-0">
+                    <h3 class="text-2xl font-bold mb-3 text-gray-600">Sobre Mí</h3>
+                    <p class="text-gray-600 leading-relaxed max-w-md">
+                        Desarrollador Full Stack con pasión por crear soluciones digitales innovadoras. 
+                        Combino creatividad con habilidades técnicas para construir aplicaciones web modernas y funcionales. 
+                        Siempre buscando aprender nuevas tecnologías y enfrentar desafíos que impulsen mi crecimiento profesional.
+                    </p>
+                    <div class="mt-4 space-y-2">
+                        <div class="flex items-center justify-center md:justify-start text-gray-600">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Puerto Montt, Región de los Lagos, Chile</span>
+                        </div>
+                        <div class="flex items-center justify-center md:justify-start text-gray-600">
+                            <i class="fas fa-graduation-cap mr-2"></i>
+                            <span>Bootcamp Full Stack JavaScript SENCE</span>
+                        </div>
+                        <div class="flex items-center justify-center md:justify-start text-gray-600">
+                            <i class="fas fa-heart mr-2"></i>
+                            <span>Apasionado por el código limpio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Proyectos</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                Una selección de mis proyectos más destacados desarrollados durante mi formación y experiencia profesional
+            </p>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button class="filter-btn px-6 py-2 rounded-full border-2 border-indigo-600 text-indigo-600 font-medium hover:bg-indigo-600 hover:text-white transition-all duration-300 active" data-filter="all">
+                    Todos
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full border-2 border-indigo-600 text-indigo-600 font-medium hover:bg-indigo-600 hover:text-white transition-all duration-300" data-filter="web">
+                    Web
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full border-2 border-indigo-600 text-indigo-600 font-medium hover:bg-indigo-600 hover:text-white transition-all duration-300" data-filter="python">
+                    Python
+                </button>
+                <button class="filter-btn px-6 py-2 rounded-full border-2 border-indigo-600 text-indigo-600 font-medium hover:bg-indigo-600 hover:text-white transition-all duration-300" data-filter="javascript">
+                    JavaScript
+                </button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- TaskFlow -->
+                <div class="project-card card-hover bg-white rounded-xl overflow-hidden shadow-lg" data-category="web javascript">
+                    <div class="h-48 gradient-bg flex items-center justify-center text-white">
+                        <i class="fas fa-tasks text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">TaskFlow</h3>
+                        <p class="text-gray-600 mb-4">Gestor de tareas desarrollado con Node.js y Express. Aplicación web para organizar y gestionar proyectos.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Express</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/bluuscript/proyecto-4-taskflow" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Alke Wallet -->
+                <div class="project-card card-hover bg-white rounded-xl overflow-hidden shadow-lg" data-category="web javascript">
+                    <div class="h-48 gradient-bg flex items-center justify-center text-white">
+                        <i class="fas fa-wallet text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Alke Wallet</h3>
+                        <p class="text-gray-600 mb-4">Aplicación de wallet para gestión de criptomonedas y activos digitales.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Express</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/bluuscript/alke-wallet" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mesa de Ayuda -->
+                <div class="project-card card-hover bg-white rounded-xl overflow-hidden shadow-lg" data-category="web javascript">
+                    <div class="h-48 gradient-bg flex items-center justify-center text-white">
+                        <i class="fas fa-headset text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Mesa de Ayuda</h3>
+                        <p class="text-gray-600 mb-4">Sistema de mesa de ayuda para procesar solicitudes o tickets en una organización. Desarrollado con Next.js.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Next.js</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">React</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+                        </div>
+                        <a href="https://github.com/bluuscript/mesa-de-ayuda-nextjs" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NóminaPy -->
+                <div class="project-card card-hover bg-white rounded-xl overflow-hidden shadow-lg" data-category="python">
+                    <div class="h-48 gradient-bg flex items-center justify-center text-white">
+                        <i class="fas fa-money-check-alt text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">NóminaPy</h3>
+                        <p class="text-gray-600 mb-4">Aplicación web desarrollada con Django para administrar nómina de empresa TriMark cadena de supermercados.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Django</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">MongoDB</span>
+                        </div>
+                        <a href="https://github.com/bluuscript/nominaPy" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- NóminaCLI -->
+                <div class="project-card card-hover bg-white rounded-xl overflow-hidden shadow-lg" data-category="python">
+                    <div class="h-48 gradient-bg flex items-center justify-center text-white">
+                        <i class="fas fa-terminal text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">NóminaCLI</h3>
+                        <p class="text-gray-600 mb-4">Administrador de nómina personal con Python. Aplicación de línea de comandos para gestión de empleados.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Python</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">CLI</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">CRUD</span>
+                        </div>
+                        <a href="https://github.com/bluuscript/nominaCLI" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SendMail Express -->
+                <div class="project-card card-hover bg-white rounded-xl overflow-hidden shadow-lg" data-category="web javascript">
+                    <div class="h-48 gradient-bg flex items-center justify-center text-white">
+                        <i class="fas fa-envelope text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">SendMail Express</h3>
+                        <p class="text-gray-600 mb-4">Sistema de envío de correos electrónicos desarrollado con Express.js.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Express</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Email</span>
+                        </div>
+                        <a href="https://github.com/bluuscript/sendmail-express" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Aplicación de Consola -->
+                <div class="project-card card-hover bg-white rounded-xl overflow-hidden shadow-lg" data-category="javascript">
+                    <div class="h-48 gradient-bg flex items-center justify-center text-white">
+                        <i class="fas fa-desktop text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Aplicación de Consola</h3>
+                        <p class="text-gray-600 mb-4">Proyecto de aplicación de consola desarrollado durante el bootcamp.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Console</span>
+                        </div>
+                        <a href="https://github.com/bluuscript/aplicacion-de-consola" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- FrontEnd Evaluación 4 -->
+                <div class="project-card card-hover bg-white rounded-xl overflow-hidden shadow-lg" data-category="web javascript">
+                    <div class="h-48 gradient-bg flex items-center justify-center text-white">
+                        <i class="fas fa-globe text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">FrontEnd Evaluación 4</h3>
+                        <p class="text-gray-600 mb-4">Proyecto frontend desarrollado como evaluación del bootcamp.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">HTML</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">CSS</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/bluuscript/frontEnd-evaluacion4" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Docker Ubuntu VNC -->
+                <div class="project-card card-hover bg-white rounded-xl overflow-hidden shadow-lg" data-category="web">
+                    <div class="h-48 gradient-bg flex items-center justify-center text-white">
+                        <i class="fas fa-docker text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Docker Ubuntu VNC Desktop</h3>
+                        <p class="text-gray-600 mb-4">Docker image para proporcionar interfaz HTML5 VNC para acceder a Ubuntu 16.04 LXDE desktop environment.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Docker</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Ubuntu</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">VNC</span>
+                        </div>
+                        <a href="https://github.com/bluuscript/docker-ubuntu-vnc-desktop" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto Módulo 6 -->
+                <div class="project-card card-hover bg-white rounded-xl overflow-hidden shadow-lg" data-category="web javascript">
+                    <div class="h-48 gradient-bg flex items-center justify-center text-white">
+                        <i class="fas fa-server text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Proyecto Módulo 6</h3>
+                        <p class="text-gray-600 mb-4">Proyecto Node & Express Web App - Bootcamp Desarrollo de Aplicaciones Full Stack JavaScript.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Express</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/bluuscript/proyecto-modulo-6" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto Módulo 7 -->
+                <div class="project-card card-hover bg-white rounded-xl overflow-hidden shadow-lg" data-category="web javascript">
+                    <div class="h-48 gradient-bg flex items-center justify-center text-white">
+                        <i class="fas fa-server text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Proyecto Módulo 7</h3>
+                        <p class="text-gray-600 mb-4">Proyecto Node & Express Web App - Bootcamp Desarrollo de Aplicaciones Full Stack JavaScript.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Express</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/bluuscript/proyecto-modulo-7" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Proyecto Módulo 8 -->
+                <div class="project-card card-hover bg-white rounded-xl overflow-hidden shadow-lg" data-category="web javascript">
+                    <div class="h-48 gradient-bg flex items-center justify-center text-white">
+                        <i class="fas fa-server text-5xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-gray-800">Proyecto Módulo 8</h3>
+                        <p class="text-gray-600 mb-4">Proyecto Node & Express Web App - Bootcamp Desarrollo de Aplicaciones Full Stack JavaScript.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Node.js</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">Express</span>
+                            <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">JavaScript</span>
+                        </div>
+                        <a href="https://github.com/bluuscript/proyecto-modulo-8" target="_blank" class="inline-flex items-center text-indigo-600 hover:text-indigo-700 font-medium">
+                            <i class="fab fa-github mr-2"></i> Ver Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Habilidades</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                Tecnologías y herramientas con las que trabajo diariamente para crear soluciones digitales
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Frontend -->
+                <div class="bg-gray-50 rounded-xl p-8 text-center card-hover">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-laptop-code text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Frontend</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fab fa-html5 text-orange-500 text-xl"></i>
+                            <span class="text-gray-700 font-medium">HTML5</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fab fa-css3-alt text-blue-500 text-xl"></i>
+                            <span class="text-gray-700 font-medium">CSS3</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fab fa-js text-yellow-500 text-xl"></i>
+                            <span class="text-gray-700 font-medium">JavaScript</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fab fa-react text-cyan-500 text-xl"></i>
+                            <span class="text-gray-700 font-medium">React</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fas fa-laptop-code text-indigo-500 text-xl"></i>
+                            <span class="text-gray-700 font-medium">Next.js</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fab fa-sass text-pink-500 text-xl"></i>
+                            <span class="text-gray-700 font-medium">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="bg-gray-50 rounded-xl p-8 text-center card-hover">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-server text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Backend</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fab fa-node-js text-green-500 text-xl"></i>
+                            <span class="text-gray-700 font-medium">Node.js</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fas fa-server text-gray-700 text-xl"></i>
+                            <span class="text-gray-700 font-medium">Express</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fab fa-python text-blue-600 text-xl"></i>
+                            <span class="text-gray-700 font-medium">Python</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fas fa-database text-green-600 text-xl"></i>
+                            <span class="text-gray-700 font-medium">Django</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fas fa-leaf text-green-500 text-xl"></i>
+                            <span class="text-gray-700 font-medium">MongoDB</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fas fa-database text-blue-700 text-xl"></i>
+                            <span class="text-gray-700 font-medium">SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Herramientas -->
+                <div class="bg-gray-50 rounded-xl p-8 text-center card-hover">
+                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tools text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Herramientas</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fab fa-git-alt text-orange-600 text-xl"></i>
+                            <span class="text-gray-700 font-medium">Git</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fab fa-github text-gray-800 text-xl"></i>
+                            <span class="text-gray-700 font-medium">GitHub</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fab fa-docker text-blue-500 text-xl"></i>
+                            <span class="text-gray-700 font-medium">Docker</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fas fa-terminal text-gray-700 text-xl"></i>
+                            <span class="text-gray-700 font-medium">CLI</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fas fa-code text-blue-600 text-xl"></i>
+                            <span class="text-gray-700 font-medium">VS Code</span>
+                        </div>
+                        <div class="skill-item flex items-center justify-center space-x-2 p-3 rounded-lg hover:bg-white transition-colors">
+                            <i class="fab fa-npm text-red-500 text-xl"></i>
+                            <span class="text-gray-700 font-medium">npm</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Contacto</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+                ¿Interesado en trabajar juntos? No dudes en contactarme para discutir tu proyecto
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-gray-800">Conectemos</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Estoy interesado en oportunidades freelance y colaboraciones. Si tienes un proyecto en mente o simplemente quieres saludar, no dudes en contactarme.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center">
+                                <i class="fab fa-github text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">GitHub</p>
+                                <a href="https://github.com/bluuscript" target="_blank" class="text-indigo-600 hover:text-indigo-700">github.com/bluuscript</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center">
+                                <i class="fas fa-envelope text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Email</p>
+                                <a href="mailto:tomymilla22@gmail.com" class="text-indigo-600 hover:text-indigo-700">tomymilla22@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-semibold text-gray-800">Ubicación</p>
+                                <a href="https://maps.google.com/?q=Puerto+Montt,+Los+Lagos,+Chile" target="_blank" class="text-indigo-600 hover:text-indigo-700">Puerto Montt, Región de los Lagos, Chile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Nombre</label>
+                            <input type="text" id="name" name="name" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300"
+                                placeholder="Tu nombre">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                            <input type="email" id="email" name="email" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300"
+                                placeholder="tu@email.com">
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-300 resize-none"
+                                placeholder="Tu mensaje..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                            class="w-full gradient-bg text-white py-3 rounded-lg font-semibold hover:opacity-90 transform hover:-translate-y-1 transition-all duration-300">
+                            Enviar Mensaje
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa Google Section -->
+    <div class="w-full h-[600px] bg-gray-100">
+        <iframe 
+            src="https://www.google.com/maps?q=-41.4693,-72.9424&z=14&output=embed" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="w-full h-full">
+        </iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <p class="mb-4">&copy; <span id="current-year"></span> Tomás Fuentes Milla. Todos los derechos reservados.</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://github.com/bluuscript" target="_blank" class="hover:text-gray-200 transition-colors">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <!-- Add more social links as needed -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Dynamic year update
+        const currentYearSpan = document.getElementById('current-year');
+        if (currentYearSpan) {
+            currentYearSpan.textContent = new Date().getFullYear();
+        }
+
+        // Project Filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filter = button.getAttribute('data-filter');
+                
+                projectCards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                        setTimeout(() => {
+                            card.style.opacity = '1';
+                            card.style.transform = 'translateY(0)';
+                        }, 10);
+                    } else {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        if (categories.includes(filter)) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    }
+                });
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Contact Form Handler
+        const contactForm = document.getElementById('contact-form');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const formData = new FormData(contactForm);
+            const name = formData.get('name');
+            const email = formData.get('email');
+            const message = formData.get('message');
+            
+            // Here you would normally send the data to a server
+            // For now, we'll just show a success message
+            alert(`Gracias por tu mensaje, ${name}! Te contactaré pronto.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Header scroll effect
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
+            
+            lastScroll = currentScroll;
+        });
+
+        // Add loading animation to project cards
+        projectCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = `all 0.3s ease ${index * 0.1}s`;
+            
+            setTimeout(() => {
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, 100);
+        });
+
+        // Typing effect for hero title (optional enhancement)
+        function typeWriter(element, text, speed = 100) {
+            let i = 0;
+            element.textContent = '';
+            
+            function type() {
+                if (i < text.length) {
+                    element.textContent += text.charAt(i);
+                    i++;
+                    setTimeout(type, speed);
+                }
+            }
+            
+            type();
+        }
+
+        // Initialize typing effect when page loads
+        window.addEventListener('load', () => {
+            const heroTitle = document.querySelector('h1');
+            if (heroTitle) {
+                const originalText = heroTitle.textContent;
+                typeWriter(heroTitle, originalText, 80);
+            }
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            const heroContent = document.querySelector('.hero-content');
+            
+            if (hero && heroContent) {
+                heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
+                hero.style.opacity = 1 - scrolled / 600;
+            }
+        });
+
+        // Active navigation link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (window.pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-indigo-600');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('text-indigo-600');
+                }
+            });
+        });
+
+        // Easter egg: Konami code
+        let konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'b', 'a'];
+        let konamiIndex = 0;
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === konamiCode[konamiIndex]) {
+                konamiIndex++;
+                
+                if (konamiIndex === konamiCode.length) {
+                    // Easter egg activated!
+                    document.body.style.animation = 'float 2s ease-in-out infinite';
+                    setTimeout(() => {
+                        document.body.style.animation = '';
+                    }, 5000);
+                    
+                    konamiIndex = 0;
+                }
+            } else {
+                konamiIndex = 0;
+            }
+        });
+    </script>
+</body>
+</html>
